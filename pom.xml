@@ -232,7 +232,6 @@
                         <origin>origin</origin>
                     </gitFlowConfig>
                     <commitMessages>
-                        <!-- since 1.2.1, see Customizing commit messages -->
                         <featureStartMessage>update versions for feature branch in ${project.artifactId}</featureStartMessage>
                         <featureFinishMessage>update versions for development branch in ${project.artifactId}</featureFinishMessage>
 
