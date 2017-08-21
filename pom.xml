@@ -170,17 +170,9 @@
                     <installProject>true</installProject>
                     <gitFlowConfig>
                         <productionBranch>master</productionBranch>
-                        <developmentBranch>develop</developmentBranch>
-                        <featureBranchPrefix>feature/</featureBranchPrefix>
-                        <releaseBranchPrefix>release/</releaseBranchPrefix>
                         <origin>origin</origin>
                     </gitFlowConfig>
                     <commitMessages>
-                        <featureStartMessage>update versions for feature branch in ${project.artifactId}
-                        </featureStartMessage>
-                        <featureFinishMessage>update versions for development branch in ${project.artifactId}
-                        </featureFinishMessage>
-
                         <releaseStartMessage>update versions for release in ${project.artifactId}</releaseStartMessage>
                         <releaseFinishMessage>update for next development version in ${project.artifactId}
                         </releaseFinishMessage>
