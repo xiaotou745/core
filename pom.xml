@@ -171,7 +171,7 @@
                     <gitFlowConfig>
                         <productionBranch>master</productionBranch>
                         <!--单分支-->
-                        <deploymentBranch>master</deploymentBranch>
+                        <developmentBranch>master</developmentBranch>
                         <origin>origin</origin>
                     </gitFlowConfig>
                     <commitMessages>
