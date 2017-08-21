@@ -170,6 +170,8 @@
                     <installProject>true</installProject>
                     <gitFlowConfig>
                         <productionBranch>master</productionBranch>
+                        <!--单分支-->
+                        <deploymentBranch>master</deploymentBranch>
                         <origin>origin</origin>
                     </gitFlowConfig>
                     <commitMessages>
