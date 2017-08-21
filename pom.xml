@@ -186,7 +186,6 @@
                         </releaseFinishMessage>
 
                         <tagReleaseMessage>tag release in ${project.artifactId}</tagReleaseMessage>
-                        <tagFeatureMessage>tag feature in ${project.artifactId}}</tagFeatureMessage>
                     </commitMessages>
                 </configuration>
             </plugin>
