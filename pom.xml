@@ -13,14 +13,14 @@
         <spring.boot.version>1.5.8.RELEASE</spring.boot.version>
 
         <!--DataSource-->
-        <mybatis.spring.version>1.3.0</mybatis.spring.version>
-        <mybatis.pagehelper.spring.version>1.1.3</mybatis.pagehelper.spring.version>
+        <mybatis.spring.version>1.3.1</mybatis.spring.version>
+        <mybatis.pagehelper.spring.version>1.2.3</mybatis.pagehelper.spring.version>
 
         <!--权限管理-->
         <shiro.version>1.4.0</shiro.version>
 
         <!--Google Guava 工具类-->
-        <guava.version>22.0</guava.version>
+        <guava.version>23.3-jre</guava.version>
 
         <!--Apache 工具类-->
         <commons.lang3.version>3.5</commons.lang3.version>
@@ -41,7 +41,7 @@
         <repository>
             <id>nexus</id>
             <name>Maven Group</name>
-            <url>https://nexus.ops.heptagram.tech/repository/maven-public/</url>
+            <url>http://nexus.ops.7mxing.com/repository/maven-public/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -55,7 +55,7 @@
         <pluginRepository>
             <id>nexus</id>
             <name>Maven Group</name>
-            <url>https://nexus.ops.heptagram.tech/repository/maven-public/</url>
+            <url>http://nexus.ops.7mxing.com/repository/maven-public/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -69,12 +69,12 @@
         <snapshotRepository>
             <id>nexus-snapshots</id>
             <name>Project SNAPSHOTS</name>
-            <url>https://nexus.ops.heptagram.tech/repository/maven-snapshots/</url>
+            <url>http://nexus.ops.7mxing.com/repository/maven-snapshots/</url>
         </snapshotRepository>
         <repository>
             <id>nexus-releases</id>
             <name>Project Release</name>
-            <url>https://nexus.ops.heptagram.tech/repository/maven-releases/</url>
+            <url>http://nexus.ops.7mxing.com/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
 
