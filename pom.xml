@@ -41,7 +41,7 @@
         <repository>
             <id>nexus</id>
             <name>Maven Group</name>
-            <url>http://nexus.ops.7mxing.com/repository/maven-public/</url>
+            <url>https://nexus.ops.heptagram.tech/repository/maven-public/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -55,7 +55,7 @@
         <pluginRepository>
             <id>nexus</id>
             <name>Maven Group</name>
-            <url>http://nexus.ops.7mxing.com/repository/maven-public/</url>
+            <url>https://nexus.ops.heptagram.tech/repository/maven-public/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -69,12 +69,12 @@
         <snapshotRepository>
             <id>nexus-snapshots</id>
             <name>Project SNAPSHOTS</name>
-            <url>http://nexus.ops.7mxing.com/repository/maven-snapshots/</url>
+            <url>https://nexus.ops.heptagram.tech/repository/maven-snapshots/</url>
         </snapshotRepository>
         <repository>
             <id>nexus-releases</id>
             <name>Project Release</name>
-            <url>http://nexus.ops.7mxing.com/repository/maven-releases/</url>
+            <url>https://nexus.ops.heptagram.tech/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
 
