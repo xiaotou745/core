@@ -5,30 +5,21 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.heptagram.core</groupId>
     <artifactId>core</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>3.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
         <!--Spring-->
-        <spring.boot.version>1.5.8.RELEASE</spring.boot.version>
+        <spring.boot.version>1.5.9.RELEASE</spring.boot.version>
 
         <!--DataSource-->
         <mybatis.spring.version>1.3.1</mybatis.spring.version>
         <mybatis.pagehelper.spring.version>1.2.3</mybatis.pagehelper.spring.version>
 
-        <!--权限管理-->
-        <shiro.version>1.4.0</shiro.version>
-
-        <!--Google Guava 工具类-->
-        <guava.version>23.3-jre</guava.version>
-
         <!--Apache 工具类-->
         <commons.lang3.version>3.5</commons.lang3.version>
         <commons.io.version>2.5</commons.io.version>
         <commons.codec.version>1.10</commons.codec.version>
-
-        <!--joda-->
-        <joda.version>2.9.9</joda.version>
 
         <!--编译选项-->
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -37,60 +28,15 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>nexus</id>
-            <name>Maven Group</name>
-            <url>https://nexus.ops.heptagram.tech/repository/maven-public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>nexus</id>
-            <name>Maven Group</name>
-            <url>https://nexus.ops.heptagram.tech/repository/maven-public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <name>Project SNAPSHOTS</name>
-            <url>https://nexus.ops.heptagram.tech/repository/maven-snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>nexus-releases</id>
-            <name>Project Release</name>
-            <url>https://nexus.ops.heptagram.tech/repository/maven-releases/</url>
-        </repository>
-    </distributionManagement>
-
-
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.9.RELEASE</version>
+        <relativePath/>
+    </parent>
 
     <dependencyManagement>
         <dependencies>
-            <!--Spring Boot 父项目-->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring.boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
             <!--Mybatis 核心包-->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
@@ -109,30 +55,6 @@
                 <version>${mybatis.pagehelper.spring.version}</version>
             </dependency>
 
-            <!--权限管理插件-->
-            <dependency>
-                <groupId>org.apache.shiro</groupId>
-                <artifactId>shiro-core</artifactId>
-                <version>${shiro.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.shiro</groupId>
-                <artifactId>shiro-web</artifactId>
-                <version>${shiro.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.shiro</groupId>
-                <artifactId>shiro-spring</artifactId>
-                <version>${shiro.version}</version>
-            </dependency>
-
-            <!--Google Guava-->
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>${guava.version}</version>
-            </dependency>
-
             <!--Apache Utils-->
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -149,13 +71,26 @@
                 <artifactId>commons-codec</artifactId>
                 <version>${commons.codec.version}</version>
             </dependency>
-
-            <!--Joda-->
-            <dependency>
-                <groupId>joda-time</groupId>
-                <artifactId>joda-time</artifactId>
-                <version>${joda.version}</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.github.eirslett</groupId>
+                    <artifactId>frontend-maven-plugin</artifactId>
+                    <version>1.6</version>
+                    <configuration>
+                        <nodeVersion>v8.9.1</nodeVersion>
+                        <yarnVersion>v1.3.2</yarnVersion>
+                        <workingDirectory>src/main/frontend</workingDirectory>
+                        <installDirectory>target</installDirectory>
+                        <nodeDownloadRoot>https://nexus.ops.heptagram.tech/repository/node-ext/</nodeDownloadRoot>
+                        <yarnDownloadRoot>https://nexus.ops.heptagram.tech/repository/node-ext/</yarnDownloadRoot>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
