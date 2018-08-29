@@ -39,7 +39,13 @@
 
 ## 版本指南
 
-`core`包当前版本为`4.0.0-REALEASE`, 主要基于`spring-boot 2.0.0.RELEASE`定义。
+### 当前版本
+
+`core`包当前版本为`4.1.0-REALEASE`, 本版本主要更新内容:
+
+1. 添加`mybatis`,`shiro`,`guava`依赖版本信息
+
+2. 主要基于`spring-boot 2.0.0.RELEASE`定义。
 
 ### 版本管理
 
