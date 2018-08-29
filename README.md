@@ -41,7 +41,15 @@
 
 `core`包当前版本为`4.0.0-REALEASE`, 主要基于`spring-boot 2.0.0.RELEASE`定义。
 
-```pom
+### 版本管理
 
+为了规范`core`包的版本, 请务必按照以下原则对版本进行控制:
+
+1. 版本号格式采用业内能用规范: `主版本号.次版本号.修正版本号-REALEASE`
+2. 每次升级`core`包时, 请同时更新版本号, 并发布到`maven`仓库,同时在项目中打一个`tag`, 定义清楚版本号及更新内容等信息。
+
+```bash
+$ git tag -a v4.0.1-REALEASE -m '添加了README.md file'
+$ git push origin v4.0.1-REALEASE 
 ```
 
