@@ -3,9 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>tech.heptagram.core</groupId>
+    <groupId>com.github.xiaotou745</groupId>
     <artifactId>core</artifactId>
-    <version>4.2.0-RELEASE</version>
+    <version>2.0.0.RELEASE</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -42,46 +42,6 @@
         <version>2.0.0.RELEASE</version>
         <relativePath/>
     </parent>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <name>Project SNAPSHOTS</name>
-            <url>https://nexus.ops.heptagram.tech/repository/maven-snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>nexus-releases</id>
-            <name>Project Release</name>
-            <url>https://nexus.ops.heptagram.tech/repository/maven-releases/</url>
-        </repository>
-    </distributionManagement>
-
-    <repositories>
-        <repository>
-            <id>nexus</id>
-            <name>Maven Group</name>
-            <url>https://nexus.ops.heptagram.tech/repository/maven-public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>nexus</id>
-            <name>Maven Group</name>
-            <url>https://nexus.ops.heptagram.tech/repository/maven-public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
 
     <dependencyManagement>
         <dependencies>
